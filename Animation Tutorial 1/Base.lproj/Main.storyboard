@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,87 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sP8-oI-qFQ">
+                                <rect key="frame" x="283" y="78" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dr7-hz-pxz">
+                                <rect key="frame" x="257" y="28" width="103" height="30"/>
+                                <state key="normal" title="Translate -&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="&lt;- Translate"/>
+                                <connections>
+                                    <action selector="translate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZT7-3X-Sc6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpB-J1-Wut">
+                                <rect key="frame" x="285" y="160" width="46" height="30"/>
+                                <state key="normal" title="Rotate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rotate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4ui-d7-Zv2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-PW-tGT">
+                                <rect key="frame" x="283" y="208" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieq-uV-Ua3">
+                                <rect key="frame" x="287" y="285" width="46" height="30"/>
+                                <state key="normal" title="Scale">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scale:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qhy-4i-o7I"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kO7-TA-Unq">
+                                <rect key="frame" x="285" y="330" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oix-GC-msK">
+                                <rect key="frame" x="247" y="401" width="127" height="30"/>
+                                <state key="normal" title="Keep on going">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keepOnGoing:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KGp-ro-2FT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NpB-J1-Wut" firstAttribute="top" secondItem="sP8-oI-qFQ" secondAttribute="bottom" constant="32" id="55Y-6j-gjY"/>
+                            <constraint firstItem="sP8-oI-qFQ" firstAttribute="top" secondItem="Dr7-hz-pxz" secondAttribute="bottom" constant="20" id="7d3-Im-Kpz"/>
+                            <constraint firstItem="Dr7-hz-pxz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="AVQ-Hp-pJe"/>
+                            <constraint firstItem="Dr7-hz-pxz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="BIP-cp-fDo"/>
+                            <constraint firstItem="vyu-PW-tGT" firstAttribute="centerX" secondItem="ieq-uV-Ua3" secondAttribute="centerX" constant="-2" id="Hee-hA-7Sy"/>
+                            <constraint firstAttribute="centerX" secondItem="Dr7-hz-pxz" secondAttribute="centerX" constant="-8.5" id="Hgr-Ts-MXq"/>
+                            <constraint firstAttribute="centerX" secondItem="sP8-oI-qFQ" secondAttribute="centerX" constant="-8" id="Hp6-Qv-BMg"/>
+                            <constraint firstItem="Oix-GC-msK" firstAttribute="top" secondItem="kO7-TA-Unq" secondAttribute="bottom" constant="21" id="S25-MW-kjn"/>
+                            <constraint firstItem="ieq-uV-Ua3" firstAttribute="top" secondItem="vyu-PW-tGT" secondAttribute="bottom" constant="27" id="ebP-zH-lC5"/>
+                            <constraint firstItem="vyu-PW-tGT" firstAttribute="centerX" secondItem="NpB-J1-Wut" secondAttribute="centerX" constant="2" id="fJ6-qp-P5d"/>
+                            <constraint firstItem="Oix-GC-msK" firstAttribute="centerX" secondItem="kO7-TA-Unq" secondAttribute="centerX" constant="0.5" id="hFm-Pb-6xt"/>
+                            <constraint firstItem="vyu-PW-tGT" firstAttribute="top" secondItem="NpB-J1-Wut" secondAttribute="bottom" constant="18" id="ha6-Ww-zKH"/>
+                            <constraint firstItem="kO7-TA-Unq" firstAttribute="top" secondItem="ieq-uV-Ua3" secondAttribute="bottom" constant="15" id="kiz-Dm-V1o"/>
+                            <constraint firstItem="sP8-oI-qFQ" firstAttribute="centerX" secondItem="Dr7-hz-pxz" secondAttribute="centerX" constant="-0.5" id="l0M-eg-tLv"/>
+                            <constraint firstItem="sP8-oI-qFQ" firstAttribute="centerX" secondItem="NpB-J1-Wut" secondAttribute="centerX" id="sm1-Cw-PGE"/>
+                            <constraint firstItem="kO7-TA-Unq" firstAttribute="centerX" secondItem="ieq-uV-Ua3" secondAttribute="centerX" id="zmK-zT-67k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnTranslate" destination="Dr7-hz-pxz" id="Jza-0g-aNI"/>
+                        <outlet property="vwRotate" destination="vyu-PW-tGT" id="wAo-MH-PTL"/>
+                        <outlet property="vwScale" destination="kO7-TA-Unq" id="SGh-qs-VV0"/>
+                        <outlet property="vwTranslate" destination="sP8-oI-qFQ" id="HVa-rM-dwn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="302"/>
         </scene>
     </scenes>
 </document>
